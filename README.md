@@ -4,13 +4,13 @@ Para executar a instalação automática basta copiar o conteúdo deste diretór
 ```bash
 $ git clone https://github.com/bbanho/NeuroLib.git
 $ cd NeuroLib/auto
-$ sh install.sh
+$ yes | sh install.sh
 ```
 
 Ou apenas
 
 ```bash
-$ git clone https://github.com/bbanho/NeuroLib.git; cd NeuroLib/auto; sh install.sh
+$ git clone https://github.com/bbanho/NeuroLib.git; cd NeuroLib/auto; yes | sh install.sh
 ```
 ## Opcional
 Também é possível conceder permissão de executável.
