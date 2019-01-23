@@ -44,12 +44,15 @@ pip3 install --user -r $INSTALLDIR/pip_packages.txt
 # Gooey
 pip3 install --user https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-16.04/wxPython-4.0.0b1-cp36-cp36m-linux_x86_64.whl
 git clone https://github.com/chriskiehl/Gooey.git
-pip3 install --user -r $INSTALLDIR/Gooey/requirements.txt
-python3 $INSTALLDIR/Gooey/setup.py install
+cd Gooey
+# pip3 install --user -r $INSTALLDIR/Gooey/requirements.txt
+awk '!/wxpython/ {print}' $INSTALLDIR/Gooey/requirements.txt | pip3 install -r /dev/stdin
+sudo python3 $INSTALLDIR/Gooey/setup.py install
 # Workarround for Gooey libpng12
 wget http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
 sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 rm libpng12-0_1.2.54-1ubuntu1_amd64.deb
+cd $INSTALLDIR
 
 # Pylon installation
 # cd ~/pylon-5.1.0.12682-x86_64
