@@ -11,7 +11,7 @@ Também é possível conceder permissão de executável.
 $ chmod +x install.sh
 $ ./install.sh
 ```
-(etc)
+## Etc
 ```bash
 $ ./install.sh > log
 ```
