@@ -2,13 +2,13 @@
 INSTALLDIR=$PWD
 
 # add PPA reps
-add-apt-repository ppa:nilarimogard/webupd8 --yes
-add-apt-repository ppa:gijzelaar/snap7 --yes
+sudo add-apt-repository ppa:nilarimogard/webupd8 --yes
+sudo add-apt-repository ppa:gijzelaar/snap7 --yes
 
-apt update && apt upgrade
+sudo apt update && sudo apt upgrade
 
 # Libs and other softwares
-apt install -y  p7zip \
+sudo apt install -y  p7zip \
 		python3-pip \
             	python3-setuptools \
 		python3-tk \
@@ -47,16 +47,16 @@ git clone https://github.com/chriskiehl/Gooey.git
 pip3 install --user -r $INSTALLDIR/Gooey/requirements.txt
 python3 $INSTALLDIR/Gooey/setup.py install
 # Workarround for Gooey libpng12
-wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i /tmp/libpng12.deb
-rm /tmp/libpng12.deb
+wget http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
+sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+rm libpng12-0_1.2.54-1ubuntu1_amd64.deb
 
 # Pylon installation
 # cd ~/pylon-5.1.0.12682-x86_64
-tar -C /opt -xzf $INSTALLDIR/pylonSDK*.tar.gz
-$INSTALLDIR/setup-usb.sh
+sudo tar -C /opt -xzf $INSTALLDIR/pylon-5.1.0.12682-x86_64/pylonSDK*.tar.gz
+sudo sh $INSTALLDIR/pylon-5.1.0.12682-x86_64/setup-usb.sh
 # cd /usr/bin
-ln -s /opt/pylon5/bin/PylonViewerApp /usr/bin/PylonViewerApp
+sudo ln -s /opt/pylon5/bin/PylonViewerApp /usr/bin/PylonViewerApp
 
 
 # PyPylon
