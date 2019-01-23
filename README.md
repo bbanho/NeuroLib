@@ -5,7 +5,7 @@ Para executar a instalação automática basta copiar o conteúdo deste diretór
 $ git clone https://github.com/bbanho/NeuroLib.git
 $ cd NeuroLib/auto
 $ sh install.sh
-```bash
+```
 
 Ou apenas
 
