@@ -2,7 +2,11 @@
 Para executar a instalação automática basta copiar o conteúdo deste diretório para onde deseja instalar. A seguir, execute diretamente o script install.sh.
 
 ```bash
-$ cd auto
+# Login via HTTPS
+$ git clone https://github.com/bbanho/NeuroLib.git
+# Login via SSH
+$ git clone git@github.com:bbanho/NeuroLib.git
+$ cd NeuroLib/auto
 $ sh install.sh
 ```
 ## Opcional
@@ -22,3 +26,8 @@ Para testar se a instalação ocorreu corretamente, fornecer as imagens e execut
 $ python3 NeuroLib.py
 $ python3 NeuroFrame.py
 ```
+### TODO
+
+* Observar licença de software proprietário
+	* https://www.baslerweb.com/en/service/pylon-eula/
+
