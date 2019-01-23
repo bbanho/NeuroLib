@@ -22,3 +22,8 @@ Para testar se a instalação ocorreu corretamente, fornecer as imagens e execut
 $ python3 NeuroLib.py
 $ python3 NeuroFrame.py
 ```
+### TODO
+
+* Observar licença de software proprietário
+	* https://www.baslerweb.com/en/service/pylon-eula/
+
