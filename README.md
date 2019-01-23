@@ -5,7 +5,7 @@ Para executar a instalação automática basta copiar o conteúdo deste diretór
 $ cd auto
 $ sh install.sh
 ```
-# (Opcional)
+## Opcional
 Também é possível conceder permissão de executável.
 ```bash
 $ chmod +x install.sh
