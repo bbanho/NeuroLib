@@ -2,8 +2,8 @@
 INSTALLDIR=$PWD
 
 # add PPA reps
-#add-apt-repository ppa:nilarimogard/webupd8 --yes
-#add-apt-repository ppa:gijzelaar/snap7 --yes
+add-apt-repository ppa:nilarimogard/webupd8 --yes
+add-apt-repository ppa:gijzelaar/snap7 --yes
 
 apt update && apt upgrade
 
@@ -30,11 +30,11 @@ apt install -y  p7zip \
 
 # libsnap7
 
-wget -q https://downloads.sourceforge.net/project/snap7/1.4.2/snap7-full-1.4.2.7z
-7z x snap7-full-1.4.2.7z
-cd $INSTALLDIR/snap7-full-1.4.2/build/unix
-make -f $INSTALLDIR/snap7-full-1.4.2/build/unix/x86_64_linux.mk
-cd $INSTALLDIR
+# wget -q https://downloads.sourceforge.net/project/snap7/1.4.2/snap7-full-1.4.2.7z
+# 7z x snap7-full-1.4.2.7z
+# cd $INSTALLDIR/snap7-full-1.4.2/build/unix
+# make -f $INSTALLDIR/snap7-full-1.4.2/build/unix/x86_64_linux.mk
+# cd $INSTALLDIR
 
 # Pip packages
 pip3 install -r $INSTALLDIR/pip_packages.txt
